@@ -8,3 +8,5 @@ echo "hello";
 <a href="masyarakat/daftar.php">daftar</a>
 
 <a href="masyarakat/login.php">Masuk</a>
+
+<a href="petugas/loginpa.php">petugas</a>

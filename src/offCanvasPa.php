@@ -38,9 +38,7 @@
                         data-feather="user"
                         style="width: 24px; height: 24px"
                     ></i>
-                    <span class="text-dark">
-                        <?php echo $_SESSION["nama"]; ?> | <?php echo $_SESSION["nik"]; ?>
-                        </span>
+                   <span class="text-dark"> <?php echo $_SESSION['nama_petugas']; ?> | <?php echo $_SESSION['level'] ?></span>
                 </a>
             </li>
         </ul>
@@ -63,7 +61,34 @@
                 aria-label="Close"
             ></button>
         </div>
-        <div class="offcanvas-body">...</div>
+        <div class="offcanvas-body">
+          <?php if($_SESSION['level'] == 'admin'){ ?>
+          <ul>
+            <li>
+              <a>Kelola Aduan</a>
+            </li>
+            <li>
+              <a>Kelola Tanggapan</a>
+            </li>
+            <li>
+              <a>Laporan</a>
+            </li>
+            <li>
+              <a>Kelola Petugas</a>
+            </li>
+            <li><a>logout</a></li>
+          </ul>
+          <?php } else { ?>
+          <ul>
+            <li>
+              <a>Kelola Aduan</a>
+            </li>
+            <li>
+              <a>Kelola Tanggapan</a>
+            </li>
+            <li><a>logout</a></li>
+          </ul>
+        </div>
     </div>
     <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
